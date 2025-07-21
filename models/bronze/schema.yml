@@ -2,7 +2,7 @@
 version: 2
 
 models:
-    - name: testmodel1
+    - name: bronze_testmodel
       description: "A starter dbt model"
       columns:
           - name: id
