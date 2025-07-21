@@ -32,9 +32,11 @@ models:
   cp_adports:
     bronze:
       +materialized: table
+      +schema: bronze
     silver:
       +materialized: view
-      +database: CP_PORTSAD_SILVER
+      +schema: silver
     gold:
       +materialized: table
-      +database: CP_PORTSAD_GOLD
+      +schema: gold
+
