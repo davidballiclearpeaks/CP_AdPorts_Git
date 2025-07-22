@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: logical_bronze          # The logical name  
+    database: dev                # Snowflake database
+    schema: bronze    # Schema name (prefixed with dbt)
+    tables:
+      - name: nation
+        columns:
+          - name: n_regionkey
+            tests:
+              - relationships:
+                  to: source('bronze', 'region')
+                  field: r_regionkey
+      - name: region
+        description: "A starter dbt model"
+        columns:
+          - name: r_regionkey
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
