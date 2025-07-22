@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: logical_bronze          # The logical name  
-    database: dev                # Snowflake database
+    database: "{{ target.database }}"                # Snowflake database
     schema: bronze    # Schema name (prefixed with dbt)
     tables:
       - name: nation
@@ -10,7 +10,7 @@ sources:
           - name: n_regionkey
             tests:
               - relationships:
-                  to: source('bronze', 'region')
+                  to: source('logical_bronze', 'region')
                   field: r_regionkey
       - name: region
         description: "A starter dbt model"
