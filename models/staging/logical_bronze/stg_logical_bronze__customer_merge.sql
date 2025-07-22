@@ -1,3 +1,9 @@
+{{ config(
+    materialized='incremental',
+    unique_key='c_custkey',          
+    incremental_strategy='merge'  
+) }}
+
 with 
 
 source as (
@@ -9,7 +15,7 @@ source as (
 renamed as (
 
     select
-        --c_custkey,
+        c_custkey,
         c_name as customerName,
         c_address as customerAddress,
         c_nationkey as nationKey,
