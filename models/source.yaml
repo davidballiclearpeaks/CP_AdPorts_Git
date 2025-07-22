@@ -9,6 +9,7 @@ sources:
         columns:
           - name: n_regionkey
             tests:
+              - not_null
               - relationships:
                   to: source('logical_bronze', 'region')
                   field: r_regionkey
@@ -20,3 +21,5 @@ sources:
             tests:
                 - unique
                 - not_null
+      - name: customer
+
