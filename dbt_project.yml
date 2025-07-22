@@ -32,10 +32,13 @@ models:
   cp_adports:
     staging:
       +materialized: ephemeral
-      +schema: staging
+      +schema: temporary
     silver:
-      +materialized: table
-      +schema: silver
+        intermediate: 
+          +materialized: ephemeral
+        final:
+          +materialized: ephemeral
+          +schema: silver
     gold:
       +materialized: table
       +schema: gold

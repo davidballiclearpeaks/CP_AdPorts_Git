@@ -12,7 +12,7 @@ renamed as (
         --c_custkey,
         c_name as customerName,
         c_address as customerAddress,
-        c_nationkey,
+        c_nationkey as nationKey,
         c_phone,
         c_acctbal,
         c_mktsegment,

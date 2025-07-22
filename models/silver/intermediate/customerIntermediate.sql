@@ -1,0 +1,1 @@
+select * from {{ ref('stg_logical_bronze__customer') }}
