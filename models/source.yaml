@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: bronze          # The logical name (dbt will refer to it as source('dballi_bronze', 'nation'))
+  - name: logical_bronze          # The logical name  
     database: dev                # Snowflake database
-    schema: dbt_dballi_bronze    # Schema name (prefixed with dbt)
+    schema: bronze    # Schema name (prefixed with dbt)
     tables:
       - name: nation
         columns:
@@ -15,7 +15,7 @@ sources:
       - name: region
         description: "A starter dbt model"
         columns:
-          - name: id
+          - name: r_regionkey
             description: "The primary key for this table"
             tests:
                 - unique

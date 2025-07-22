@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('bronze', 'nation') }}
+    select * from {{ source('logical_bronze', 'nation') }}
 
 ),
 
