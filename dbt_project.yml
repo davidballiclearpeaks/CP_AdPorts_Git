@@ -31,11 +31,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   cp_adports:
     staging:
-      +materialized: ephemeral
-      +schema: staging
-    silver:
       +materialized: table
-      +schema: silver
+      +schema: temporary
+    silver:
+        intermediate: 
+          +materialized: ephemeral
+        final:
+          +materialized: ephemeral
+          +schema: silver
     gold:
       +materialized: table
       +schema: gold

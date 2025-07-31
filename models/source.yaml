@@ -23,3 +23,8 @@ sources:
                 - not_null
       - name: customer
 
+      - name: maritimadelmediterraneosau_customer
+      - name: maritimadelmediterraneosau_nation
+      - name: noatummaritimeservicessl_customer
+      - name: noatummaritimeservicessl_region
+
