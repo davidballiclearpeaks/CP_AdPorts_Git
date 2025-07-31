@@ -1,0 +1,1 @@
+{{ union_company_tables('REGION') }}
