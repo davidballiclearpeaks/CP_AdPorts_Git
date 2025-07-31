@@ -1,0 +1,5 @@
+{
+    "nao.dbt.enabled": true,
+    "nao.dbt.target": "dev",
+    "nao.dbt.profilesDirectory": ""
+}
